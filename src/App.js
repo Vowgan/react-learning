@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import Pokemon from './components/Pokemon';
 import {useState} from 'react';
 
@@ -8,7 +8,7 @@ function App() {
 
     const showPokemon = true;
     return (
-        <div className="App">
+        <div className="App bg-red-300">
             {
                 showPokemon ? (
                     <>
