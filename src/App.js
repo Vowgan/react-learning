@@ -65,6 +65,16 @@ function App() {
         ]
     );
 
+    function updatePokemon(dex, newName, newType) {
+        const updatedPokemon = pokemonList.map((mon) => {
+            if (dex == mon.dex) {
+                return {...mon, name: newName, type: newType};
+            }
+            return mon;
+        });
+        setPokemonList(updatedPokemon);
+    }
+
     const showPokemon = true;
     return (
         <div className="App">
@@ -83,6 +93,7 @@ function App() {
                                     type={mon.type}
                                     dex={mon.dex}
                                     img={mon.img}
+                                    updatePokemon={updatePokemon}
                                 />);
                             })}
                         </div>
